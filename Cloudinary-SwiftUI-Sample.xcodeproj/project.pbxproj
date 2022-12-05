@@ -14,6 +14,7 @@
 		B6B4B02329372F3400291FE6 /* Uploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B4B02229372F3400291FE6 /* Uploader.swift */; };
 		B6D9080E293E8D1F00638F82 /* Cloudinary in Frameworks */ = {isa = PBXBuildFile; productRef = B6D9080D293E8D1F00638F82 /* Cloudinary */; };
 		B6D90810293E8D3400638F82 /* CloudinaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9080F293E8D3400638F82 /* CloudinaryService.swift */; };
+		B6D90812293E925C00638F82 /* corgi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6D90811293E925C00638F82 /* corgi.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B6B4B01B29372F1300291FE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B6B4B02229372F3400291FE6 /* Uploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uploader.swift; sourceTree = "<group>"; };
 		B6D9080F293E8D3400638F82 /* CloudinaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudinaryService.swift; sourceTree = "<group>"; };
+		B6D90811293E925C00638F82 /* corgi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = corgi.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		B6B4B01329372F1200291FE6 /* Cloudinary-SwiftUI-Sample */ = {
 			isa = PBXGroup;
 			children = (
+				B6D90811293E925C00638F82 /* corgi.jpg */,
 				B6B4B01429372F1200291FE6 /* Cloudinary_SwiftUI_SampleApp.swift */,
 				B6B4B01629372F1200291FE6 /* ContentView.swift */,
 				B6B4B01829372F1300291FE6 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6D90812293E925C00638F82 /* corgi.jpg in Resources */,
 				B6B4B01C29372F1300291FE6 /* Preview Assets.xcassets in Resources */,
 				B6B4B01929372F1300291FE6 /* Assets.xcassets in Resources */,
 			);

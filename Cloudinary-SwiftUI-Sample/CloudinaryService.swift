@@ -17,9 +17,14 @@ class CloudinaryService: ObservableObject {
     }
 
     func getImages() {
-        let config = CLDConfiguration(cloudName: "demo", apiKey: "API_KEY", secure: true)
-        cloudinary = CLDCloudinary(configuration: config)
-        url = cloudinary!.createUrl().setTransformation(CLDTransformation().setEffect("sepia")).generate("sample.jpg")!
+        let config = CLDConfiguration.initWithEnvParams()
+        cloudinary = CLDCloudinary(configuration: config!)
+        let file = Bundle.main.url(forResource: "corgi", withExtension: "jpg")!
+        let request = cloudinary!.createUploader().upload(url: file, uploadPreset: "unsigned-image", params: CLDUploadRequestParams()).response({
+            (response, error) in
+            print(response)
+            self.url = self.cloudinary!.createUrl().setTransformation(CLDTransformation().setEffect("sepia")).generate((response?.publicId)!)!
+        })
 
     }
 }
