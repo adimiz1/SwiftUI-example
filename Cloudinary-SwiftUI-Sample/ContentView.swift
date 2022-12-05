@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @StateObject var cloudinary = CloudinaryService()
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+            AsyncImage(
+                url: URL(string: cloudinary.url),
+                content: { image in
+                    image.resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(maxWidth: 150, maxHeight: 265)
+                },
+                placeholder: {
+                    ProgressView()
+                }
+            )
+        }.padding()
     }
 }
 

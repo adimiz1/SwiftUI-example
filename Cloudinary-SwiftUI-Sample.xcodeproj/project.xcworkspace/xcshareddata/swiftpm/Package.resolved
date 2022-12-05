@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "cloudinary_ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cloudinary/cloudinary_ios",
+      "state" : {
+        "revision" : "43a2d4c8ecc830e666ed4856fd681d51d632c119",
+        "version" : "3.3.0"
+      }
+    }
+  ],
+  "version" : 2
+}

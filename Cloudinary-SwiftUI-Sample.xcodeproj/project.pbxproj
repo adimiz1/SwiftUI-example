@@ -11,6 +11,9 @@
 		B6B4B01729372F1200291FE6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B4B01629372F1200291FE6 /* ContentView.swift */; };
 		B6B4B01929372F1300291FE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6B4B01829372F1300291FE6 /* Assets.xcassets */; };
 		B6B4B01C29372F1300291FE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6B4B01B29372F1300291FE6 /* Preview Assets.xcassets */; };
+		B6B4B02329372F3400291FE6 /* Uploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B4B02229372F3400291FE6 /* Uploader.swift */; };
+		B6D9080E293E8D1F00638F82 /* Cloudinary in Frameworks */ = {isa = PBXBuildFile; productRef = B6D9080D293E8D1F00638F82 /* Cloudinary */; };
+		B6D90810293E8D3400638F82 /* CloudinaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D9080F293E8D3400638F82 /* CloudinaryService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,8 @@
 		B6B4B01629372F1200291FE6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B6B4B01829372F1300291FE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6B4B01B29372F1300291FE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B6B4B02229372F3400291FE6 /* Uploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uploader.swift; sourceTree = "<group>"; };
+		B6D9080F293E8D3400638F82 /* CloudinaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudinaryService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6D9080E293E8D1F00638F82 /* Cloudinary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +61,8 @@
 				B6B4B01629372F1200291FE6 /* ContentView.swift */,
 				B6B4B01829372F1300291FE6 /* Assets.xcassets */,
 				B6B4B01A29372F1300291FE6 /* Preview Content */,
+				B6B4B02229372F3400291FE6 /* Uploader.swift */,
+				B6D9080F293E8D3400638F82 /* CloudinaryService.swift */,
 			);
 			path = "Cloudinary-SwiftUI-Sample";
 			sourceTree = "<group>";
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = "Cloudinary-SwiftUI-Sample";
+			packageProductDependencies = (
+				B6D9080D293E8D1F00638F82 /* Cloudinary */,
+			);
 			productName = "Cloudinary-SwiftUI-Sample";
 			productReference = B6B4B01129372F1200291FE6 /* Cloudinary-SwiftUI-Sample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = B6B4B00829372F1200291FE6;
+			packageReferences = (
+				B6D9080C293E8D1F00638F82 /* XCRemoteSwiftPackageReference "cloudinary_ios" */,
+			);
 			productRefGroup = B6B4B01229372F1200291FE6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6B4B02329372F3400291FE6 /* Uploader.swift in Sources */,
+				B6D90810293E8D3400638F82 /* CloudinaryService.swift in Sources */,
 				B6B4B01729372F1200291FE6 /* ContentView.swift in Sources */,
 				B6B4B01529372F1200291FE6 /* Cloudinary_SwiftUI_SampleApp.swift in Sources */,
 			);
@@ -337,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B6D9080C293E8D1F00638F82 /* XCRemoteSwiftPackageReference "cloudinary_ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cloudinary/cloudinary_ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B6D9080D293E8D1F00638F82 /* Cloudinary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6D9080C293E8D1F00638F82 /* XCRemoteSwiftPackageReference "cloudinary_ios" */;
+			productName = Cloudinary;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B6B4B00929372F1200291FE6 /* Project object */;
 }
