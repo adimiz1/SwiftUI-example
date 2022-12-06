@@ -12,17 +12,22 @@ class CloudinaryService: ObservableObject {
     var cloudinary: CLDCloudinary?
     @Published var url = ""
 
+    // Constructor
     init() {
         getImages()
     }
 
     func getImages() {
+        // Init config from envirounment variable
         let config = CLDConfiguration.initWithEnvParams()
+        // Create Cloudinary object
         cloudinary = CLDCloudinary(configuration: config!)
+        // Load local file
         let file = Bundle.main.url(forResource: "corgi", withExtension: "jpg")!
-        let request = cloudinary!.createUploader().upload(url: file, uploadPreset: "unsigned-image", params: CLDUploadRequestParams()).response({
+        //Make unsigned upload using upload preset
+        cloudinary!.createUploader().upload(url: file, uploadPreset: "unsigned-image", params: CLDUploadRequestParams()).response({
             (response, error) in
-            print(response)
+            //Update the url string with the new public id from the uploaded asset
             self.url = self.cloudinary!.createUrl().setTransformation(CLDTransformation().setEffect("sepia")).generate((response?.publicId)!)!
         })
 
